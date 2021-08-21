@@ -10,5 +10,14 @@ function findCombination(target, array) {
   // If not, add the number to the set if it is not already part of it.
   // Time: O(n) Space: O(n)
 
-  
+  const valuesSeen = new Set();
+  for(let i=0; i<array.length; i++) {
+    const firstValue = array[i];
+    const matchingValue = target - firstValue;
+    if(valuesSeen.has(matchingValue)) {
+      return true;
+    }
+    valuesSeen.add(firstValue);
+  }
+  return false;
 }
