@@ -12,10 +12,11 @@ function checkPalindrome(str) {
 
   const oddLetters = new Set();
   for (let i = 0; i < str.length; i++) {
-    if(oddLetters.has(str.charAt(i))) {
-      oddLetters.delete(str.charAt(i));
+    const currentLetter = str.charAt(i);
+    if(oddLetters.has(currentLetter)) {
+      oddLetters.delete(currentLetter);
     } else {
-      oddLetters.add(str.charAt(i));
+      oddLetters.add(currentLetter);
     }
   }
   return oddLetters.size > 1;
