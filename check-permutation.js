@@ -10,5 +10,21 @@ function checkPalindrome(str) {
   // permutated into a palindrome.
   // Efficiency: Time O(n), Space O(n)
 
-  
+  const oddLetters = new Set();
+  for (let i = 0; i < str.length; i++) {
+    if(oddLetters.has(str.charAt(i))) {
+      oddLetters.delete(str.charAt(i));
+    } else {
+      oddLetters.add(str.charAt(i));
+    }
+  }
+  if(oddLetters.size > 1) {
+    return false;
+  } else {
+    return true;
+  }
 }
+
+// Input string from command line as third argument
+let inputString = process.argv[2];
+console.log(checkPalindrome(inputString));
