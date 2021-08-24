@@ -18,11 +18,7 @@ function checkPalindrome(str) {
       oddLetters.add(str.charAt(i));
     }
   }
-  if(oddLetters.size > 1) {
-    return false;
-  } else {
-    return true;
-  }
+  return oddLetters.size > 1;
 }
 
 // Input string from command line as third argument
