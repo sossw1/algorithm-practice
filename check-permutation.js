@@ -19,7 +19,7 @@ function checkPalindrome(str) {
       oddLetters.add(currentLetter);
     }
   }
-  return oddLetters.size > 1;
+  return oddLetters.size < 1;
 }
 
 // Input string from command line as third argument
