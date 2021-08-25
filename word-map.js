@@ -10,8 +10,11 @@ function wordMap(inputString) {
   sure to skip over spaces, periods, etc.
 
   Idea: Use array's built in split method to retrieve array of words and
-  punctuation, then toLowerCase, then run through array with typeOf string.
+  punctuation, then toLowerCase, then run through array.
+
+  Idea 2: Going through array, slice out words between spaces/punctuation, then
+  add/increment key in the map.
   */
   
-
+  
 }
