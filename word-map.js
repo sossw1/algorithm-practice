@@ -15,6 +15,14 @@ function wordMap(inputString) {
   Idea 2: Going through array, slice out words between spaces/punctuation, then
   add/increment key in the map.
   */
+
+  // Helper function to check if letter
+  function isLetter(char) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    return alphabet.includes(char);
+  }
+
   
-  
+
 }
+
