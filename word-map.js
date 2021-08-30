@@ -27,7 +27,7 @@ function wordMap(inputString) {
   const words = new Map();
 
   for (let i = 0; i < inputString.length; i++) {
-    let currentChar = inputString[i];
+    let currentChar = inputString.charAt(i);
     if(isLetter(currentChar)) {
       // start word slices on first letter
       if(currentWordLength === 0) {
