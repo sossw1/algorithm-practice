@@ -24,7 +24,7 @@ function wordMap(inputString) {
 
   let currentWordStart = 0;
   let currentWordLength = 0;
-  const words = [];
+  const words = new Map();
 
   for (let i = 0; i < inputString.length; i++) {
     let currentChar = inputString[i];
@@ -38,8 +38,12 @@ function wordMap(inputString) {
       if(currentWordLength === 0) {
         continue;
       }
-      const word = inputString.slice(currentWordStart, currentWordStart + currentWordLength);
-      words.push(word);
+      const word = inputString.slice(currentWordStart, currentWordStart + currentWordLength).toLowerCase();
+      if(words.has(word)) {
+        words.set(word, words.get(word) + 1)
+      } else {
+        words.set(word, 1);
+      }
       currentWordLength = 0;
     }
   }
