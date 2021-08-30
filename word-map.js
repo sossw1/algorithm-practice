@@ -22,7 +22,26 @@ function wordMap(inputString) {
     return alphabet.includes(char);
   }
 
-  
+  let currentWordStart = 0;
+  let currentWordLength = 0;
+  const words = [];
 
+  for (let i = 0; i < inputString.length; i++) {
+    let currentChar = inputString[i];
+    if(isLetter(currentChar)) {
+      // start word slices on first letter
+      if(currentWordLength === 0) {
+        currentWordStart = i;
+      }
+      currentWordLength += 1;
+    } else {
+      if(currentWordLength === 0) {
+        continue;
+      }
+      const word = inputString.slice(currentWordStart, currentWordStart + currentWordLength);
+      words.push(word);
+      currentWordLength = 0;
+    }
+  }
+  return words;
 }
-
