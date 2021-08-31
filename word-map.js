@@ -1,10 +1,7 @@
 /*
 Write a function that takes a long string and returns a map, where the keys are
 words and the values are the number of times the words occurred.
-*/
 
-function wordMap(inputString) {
-  /*
   For each word of the input string, accumulate on a key inside the map while
   creating new keys for words that have not yet occurred in the string. Make
   sure to skip over spaces, periods, etc.
@@ -14,8 +11,9 @@ function wordMap(inputString) {
 
   Idea 2: Going through array, slice out words between spaces/punctuation, then
   add/increment key in the map.
-  */
+*/
 
+function wordMap(inputString) {
   // Helper function to check if letter
   function isLetter(char) {
     const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
