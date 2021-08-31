@@ -17,17 +17,13 @@ function bestProfit(priceArray) {
 
   for (let i = 1; i < priceArray.length; i++) {
     let currentPrice = priceArray[i];
-    // check for new global minimum
-    if (currentPrice < currentMinimum) {
-      let previousMinimum = currentMinimum;
-      currentMinimum = currentPrice;
-      // if new global min found, use previous global min in profit calculation
-      if (previousMinimum - currentPrice > currentHighestProfit) {
-        currentHighestProfit = currentPrice - previousMinimum;
-      }
-      // if no new global min found, check profit with current global min
-    } else if (currentPrice - currentMinimum > currentHighestProfit) {
+    // Check if there is a new highest profit
+    if(currentPrice - currentMinimum > currentHighestProfit) {
       currentHighestProfit = currentPrice - currentMinimum;
+    }
+    // Check if there is a new minimum price
+    if(currentPrice < currentMinimum) {
+      currentMinimum = currentPrice;
     }
   }
   return currentHighestProfit;
