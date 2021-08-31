@@ -9,7 +9,7 @@ function bestProfit(priceArray) {
 
   // Must have an array with at least two prices
   if (priceArray.length < 2) {
-    return null;
+    throw new Error('Must have at least 2 stock prices.')
   }
 
   let currentMinimum = priceArray[0];
