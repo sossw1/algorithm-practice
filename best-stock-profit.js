@@ -18,13 +18,9 @@ function bestProfit(priceArray) {
   for (let i = 1; i < priceArray.length; i++) {
     let currentPrice = priceArray[i];
     // Check if there is a new highest profit
-    if(currentPrice - currentMinimum > currentHighestProfit) {
-      currentHighestProfit = currentPrice - currentMinimum;
-    }
+    currentHighestProfit = Math.max(currentHighestProfit, currentPrice - currentMinimum);
     // Check if there is a new minimum price
-    if(currentPrice < currentMinimum) {
-      currentMinimum = currentPrice;
-    }
+    currentMinimum = Math.min(currentMinimum, currentPrice);
   }
   return currentHighestProfit;
 }
