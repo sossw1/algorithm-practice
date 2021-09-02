@@ -13,8 +13,10 @@ with three of them.
 
   NOTE: We also need to consider cases with 0
   
-  Idea 3: Greedy walk through array for the three highest and three 
-  lowest numbers, then decide what combination is best.
+  Idea 3: Greedy walk through array for the highest product of three, which will
+  be the result of the highest number times either the product of the two next
+  highest numbers or the two lowest numbers. Track these intermediate values
+  along the way.
 */
 
 function findHighestProductTriple(arrayOfInts) {
