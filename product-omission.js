@@ -10,6 +10,10 @@ Ex: f([1, 2, 3]) = [6, 3, 2]
 */
 
 function getProductOfAllIntsExceptAtIndex(arrayOfInts) {
+  // Check if array has multiple integers
+  if(arrayOfInts.length < 2) {
+    throw new Error('Need at least two integers');
+  }
   // resultArray accumulates products of indexes prior to current index
   let resultArray = [];
   let productBefore = 1;
