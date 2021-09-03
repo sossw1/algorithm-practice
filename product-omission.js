@@ -14,7 +14,7 @@ function getProductOfAllIntsExceptAtIndex(arrayOfInts) {
   let resultArray = [];
   let productBefore = 1;
   for(let i = 0; i < arrayOfInts.length; i++) {
-    resultArray.push[productBefore];
+    resultArray.push(productBefore);
     productBefore *= arrayOfInts[i];
   }
   
