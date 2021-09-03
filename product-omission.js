@@ -10,5 +10,12 @@ Ex: f([1, 2, 3]) = [6, 3, 2]
 */
 
 function getProductOfAllIntsExceptAtIndex(arrayOfInts) {
-
+  // resultArray accumulates products of indexes prior to current index
+  let resultArray = [];
+  let productBefore = 1;
+  for(let i = 0; i < arrayOfInts.length; i++) {
+    resultArray.push[productBefore];
+    productBefore *= arrayOfInts[i];
+  }
+  
 }
