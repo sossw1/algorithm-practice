@@ -13,9 +13,16 @@ function getProductOfAllIntsExceptAtIndex(arrayOfInts) {
   // resultArray accumulates products of indexes prior to current index
   let resultArray = [];
   let productBefore = 1;
-  for(let i = 0; i < arrayOfInts.length; i++) {
+  let productAfter = 1;
+  for (let i = 0; i < arrayOfInts.length; i++) {
     resultArray.push(productBefore);
     productBefore *= arrayOfInts[i];
   }
-  
+  /* multiply resultArray entries in reverse order by accumulated product of
+  indexes after current index */
+  for (let j = arrayOfInts.length; j > 0; j--) {
+    resultArray[j - 1] *= productAfter;
+    productAfter *= arrayOfInts[j - 1];
+  }
+  return resultArray;
 }
