@@ -23,8 +23,8 @@ function shuffle(array) {
   }
   
   for(let i = 0; i < array.length; i++) {
-    let newIndex = getRandom(0, array.length - 1);
-    swap(array, i, newIndex);
+    let randomIndex = getRandom(i, array.length - 1);
+    swap(array, i, randomIndex);
   }
 
   return array;
