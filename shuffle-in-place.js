@@ -1,8 +1,11 @@
 /*
-Write a function that performs an in-place shuffle of an array.
+Write a function that performs an in-place shuffle of an array. Make sure the
+shuffle is uniform, meaning each item of the original array must have the same
+probability of ending up in each spot in the final array.
 
-Idea 1: For each index in the array, get a random number that determines the new
-index that value should be swapped to.
+  Idea 1: For each index in the array, get a random number that determines the
+  new index that value should be swapped to.
+    This did not produce a uniform shuffle.
 */
 
 function shuffle(array) {
