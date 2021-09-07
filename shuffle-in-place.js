@@ -16,4 +16,10 @@ function shuffle(array) {
     array[secondIndex] = placeholder;
   }
   
+  for(let i = 0; i < array.length; i++) {
+    let newIndex = getRandom(0, array.length - 1);
+    swap(array, i, newIndex);
+  }
+
+  return array;
 }
