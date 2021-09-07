@@ -6,6 +6,9 @@ probability of ending up in each spot in the final array.
   Idea 1: For each index in the array, get a random number that determines the
   new index that value should be swapped to.
     This did not produce a uniform shuffle.
+
+  Idea 2: For each index in the new array, select a random element from the
+  input array excluding previous indexes to swap to that index.
 */
 
 function shuffle(array) {
