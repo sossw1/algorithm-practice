@@ -8,7 +8,9 @@ input array. Optimize the solution for space efficiency.
     Unfortunately, this would either require an additional array of size n in
     memory, or we would be modifying the input array.
   
-  
+  Idea 2: At each step, cut array size at midpoint value and check which half
+  has the duplicate by checking size of array halves. Pidgeonhole the duplicate,
+  repeating until array half size is 1.
 */
 
 function findDuplicate(arrayOfInts) {
