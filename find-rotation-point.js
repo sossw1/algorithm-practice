@@ -11,5 +11,24 @@ a function that finds this rotation point.
 */
 
 function findRotationPoint(arrayOfWords) {
-  
+  let lowerBound = -1;
+  let upperBound = arrayOfWords.length;
+  let firstWord = arrayOfWords[0];
+  while(lowerBound + 1 < upperBound) {
+    let middleIndex = Math.floor((upperBound + lowerBound) / 2);
+    // check if guess is the rotation point
+    if(arrayOfWords[middleIndex] < arrayOfWords[middleIndex - 1]) {
+      return middleIndex;
+    }
+    // determine whether rotation point is left or right of guess
+    if(arrayOfWords[middleIndex] > firstWord) {
+      // search right
+      lowerBound = middleIndex;
+      firstWord = arrayOfWords[middleIndex];
+    } else {
+      // search left
+      upperBound = middleIndex;
+    }
+  }
+  return 0;
 }
