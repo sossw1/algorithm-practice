@@ -25,7 +25,7 @@ function shuffle(array) {
   // Need at least 2 elements
   if(array.length < 2) return array;
   
-  for(let i = 0; i < array.length; i++) {
+  for(let i = 0; i < array.length - 1; i++) {
     let randomIndex = getRandom(i, array.length - 1);
     swap(array, i, randomIndex);
   }
