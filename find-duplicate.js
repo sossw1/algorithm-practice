@@ -13,6 +13,18 @@ input array. Optimize the solution for space efficiency.
   repeating until array half size is 1.
 */
 
-function findDuplicate(arrayOfInts) {
+function findDuplicate(numbers) {
+  let floor = 1;
+  let ceiling = numbers.length - 1;
 
+  while(floor < ceiling) {
+    let midpoint = Math.floor((floor + ceiling) / 2);
+    let lowerRangeFloor = floor;
+    let lowerRangeCeiling = midpoint;
+    let upperRangeFloor = midpoint + 1;
+    let upperRangeCeiling = ceiling;
+
+    
+  }
+  return floor;
 }
