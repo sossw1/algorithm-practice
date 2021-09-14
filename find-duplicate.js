@@ -24,6 +24,15 @@ function findDuplicate(numbers) {
     let upperRangeFloor = midpoint + 1;
     let upperRangeCeiling = ceiling;
 
+    let distinctInLowerRange = lowerRangeCeiling - lowerRangeFloor + 1;
+    
+    let itemsInLowerRange = 0;
+    for(let i = 0; i < numbers.length; i++) {
+      if(numbers[i] <= lowerRangeCeiling && numbers[i] >= lowerRangeFloor) {
+        itemsInLowerRange += 1;
+      }
+    }
+
     
   }
   return floor;
