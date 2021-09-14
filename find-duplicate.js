@@ -33,7 +33,13 @@ function findDuplicate(numbers) {
       }
     }
 
-    
+    if(itemsInLowerRange > distinctInLowerRange) {
+      floor = lowerRangeFloor;
+      ceiling = lowerRangeCeiling;
+    } else {
+      floor = upperRangeFloor;
+      ceiling = upperRangeCeiling;
+    }
   }
   return floor;
 }
