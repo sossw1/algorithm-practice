@@ -15,4 +15,12 @@ function sortScores(arrayOfScores, highestPossibleScore) {
     }
   });
   
+  for(let i = highestPossibleScore; i >= 0; i--) {
+    if(scores.hasOwnProperty([i])) {
+      for(let j = 0; j < scores[i]; j++) {
+        sortedScores.push(i);
+      }
+    }
+  }
+  return sortedScores;
 }
