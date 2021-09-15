@@ -5,5 +5,14 @@ Write a function that takes an array of scores and the highest possible score an
 */
 
 function sortScores(arrayOfScores, highestPossibleScore) {
+  const scores = {};
+  const sortedScores = [];
+  arrayOfScores.forEach((item) => {
+    if(scores.hasOwnProperty([item])) {
+      scores[item] += 1;
+    } else {
+      scores[item] = 1;
+    }
+  });
   
 }
