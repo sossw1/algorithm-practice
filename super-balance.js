@@ -6,6 +6,24 @@ Write a function to check if a binary tree is "superbalanced", meaning the diffe
   Idea 2: Using depth-first search (DFS), we compare leaf depths and store the minimum leaf depth for comparison. DFS is more likely to fail faster than BFS, which helps improve the best-case scenario.
 */
 
+class BinaryTreeNode {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+
+  insertLeft(value) {
+    this.left = new BinaryTreeNode(value);
+    return this.left;
+  }
+
+  insertRight(value) {
+    this.right = new BinaryTreeNode(value);
+    return this.right;
+  }
+}
+
 function isSuperBalanced(binaryTree) {
 
 }
