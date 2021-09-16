@@ -46,6 +46,15 @@ function isSuperBalanced(treeRoot) {
           return false
         }
       }
+    } else {
+      // we don't have a leaf, continue on
+      if(node.left) {
+        nodes.push([node.left, depth + 1]);
+      }
+
+      if(node.right) {
+        nodes.push([node.right, depth + 1]);
+      }
     }
   }
   return true;
