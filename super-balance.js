@@ -29,4 +29,11 @@ function isSuperBalanced(treeRoot) {
     return true;
   }
   
+  // accumulate unique depths
+  const depths = [];
+  const nodes = [[treeRoot, 0]]
+  while(nodes.length) {
+    
+  }
+  return true;
 }
