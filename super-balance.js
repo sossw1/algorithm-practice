@@ -36,7 +36,16 @@ function isSuperBalanced(treeRoot) {
     const nodePair = nodes.pop();
     const [node, depth] = nodePair;
     if(!node.left && !node.right) {
-      
+      if(depths.indexOf(depth) < 0) {
+        depths.push(depth);
+        // If we have more than 2 unique leaf depths, or two leaf depths differ by more than 1, the binary tree is not superbalanced
+        if(
+          (depths.length > 2) ||
+          (depths.length === 2 && Math.abs(depths[0] - depths[1]) > 1)
+        ) {
+          return false
+        }
+      }
     }
   }
   return true;
