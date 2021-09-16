@@ -24,6 +24,9 @@ class BinaryTreeNode {
   }
 }
 
-function isSuperBalanced(binaryTree) {
-
+function isSuperBalanced(treeRoot) {
+  if(!treeRoot) {
+    return true;
+  }
+  
 }
