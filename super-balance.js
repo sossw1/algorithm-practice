@@ -33,7 +33,11 @@ function isSuperBalanced(treeRoot) {
   const depths = [];
   const nodes = [[treeRoot, 0]]
   while(nodes.length) {
-    
+    const nodePair = nodes.pop();
+    const [node, depth] = nodePair;
+    if(!node.left && !node.right) {
+      
+    }
   }
   return true;
 }
