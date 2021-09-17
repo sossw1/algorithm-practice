@@ -1,5 +1,7 @@
 /*
 Problem: Write a function to check if a binary tree is a valid binary search tree.
+
+  Idea 1: At each node, check if the value fits within bounds. Use DFS, since it is likely in most cases to take less space than BFS.
 */
 
 class BinaryTreeNode {
