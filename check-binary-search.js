@@ -27,5 +27,8 @@ function isBinarySearchTree(rootNode) {
   const upperBound = Number.POSITIVE_INFINITY;
   // Store root node with bounds
   const nodes = [{ rootNode, lowerBound, upperBound }];
-
+  while(nodes.length) {
+    const node = nodes.pop();
+    
+  }
 }
