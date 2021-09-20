@@ -23,5 +23,9 @@ class BinaryTreeNode {
 }
 
 function isBinarySearchTree(rootNode) {
-  
+  const lowerBound = Number.NEGATIVE_INFINITY;
+  const upperBound = Number.POSITIVE_INFINITY;
+  // Store root node with bounds
+  const nodes = [{ rootNode, lowerBound, upperBound }];
+
 }
