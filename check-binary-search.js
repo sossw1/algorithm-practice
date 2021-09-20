@@ -37,6 +37,20 @@ function isBinarySearchTree(rootNode) {
       // node value out of bounds
       return false;
     }
-    
+    if(node.left) {
+      nodes.push({
+        node: node.left,
+        lowerBound,
+        upperBound: node.value
+      })
+    }
+    if(node.right) {
+      nodes.push({
+        node: node.right,
+        lowerBound: node.value,
+        upperBound
+      })
+    }
   }
+  return true;
 }
