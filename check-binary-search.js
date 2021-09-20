@@ -28,7 +28,7 @@ function isBinarySearchTree(rootNode) {
   // Store root node with bounds
   const nodes = [{ rootNode, lowerBound, upperBound }];
   while(nodes.length) {
-    const node = nodes.pop();
+    const { node, lowerBound, upperBound } = nodes.pop();
     
   }
 }
