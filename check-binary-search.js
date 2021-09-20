@@ -29,6 +29,10 @@ function isBinarySearchTree(rootNode) {
   const nodes = [{ rootNode, lowerBound, upperBound }];
   while(nodes.length) {
     const { node, lowerBound, upperBound } = nodes.pop();
+    if((node.value < lowerBound) || (node.value > upperBound)) {
+      // node value out of bounds
+      return false;
+    }
     
   }
 }
