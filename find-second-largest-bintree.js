@@ -22,6 +22,14 @@ class BinaryTreeNode {
   }
 }
 
+function findLargest(rootNode) {
+  let current = rootNode;
+  while(current) {
+    if(!current.right) return current.value;
+    current = current.right;
+  }
+}
+
 function findSecondLargest(rootNode) {
 
 }
