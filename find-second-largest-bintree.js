@@ -3,7 +3,7 @@ Write a function that finds the second largest element in a binary search tree.
 
   Idea 1: Use depth-first search approach to find the largest node value until a leaf is reached, at which point its parent should be the second-largest value in a binary search tree.
     Time: O(depth) which is O(log n) if the tree is balanced and O(n) otherwise
-    Space: O(1) since we only store the current node and it's ancestor's value
+    Space: O(1) since we only store the current node
 */
 
 class BinaryTreeNode {
