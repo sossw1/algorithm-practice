@@ -31,5 +31,17 @@ function findLargest(rootNode) {
 }
 
 function findSecondLargest(rootNode) {
+  // check if at least 2 nodes
+  let currentNode = rootNode;
+  while(currentNode) {
+    if(
+      // if current node is parent of largest node, return its value
+      current.right
+      && !current.right.left
+      && !current.right.right
+    ) {
+      return current.value;
+    }
 
+  }
 }
