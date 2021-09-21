@@ -24,16 +24,16 @@ class BinaryTreeNode {
 
 function findLargest(rootNode) {
   let current = rootNode;
-  while(current) {
-    if(!current.right) return current.value;
+  while (current) {
+    if (!current.right) return current.value;
     current = current.right;
   }
 }
 
 function findSecondLargest(rootNode) {
   // check if at least 2 nodes
-  let currentNode = rootNode;
-  while(currentNode) {
+  let current = rootNode;
+  while (current) {
     if(
       // if current node is parent of largest node, return its value
       current.right
