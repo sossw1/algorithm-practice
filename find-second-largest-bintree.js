@@ -32,6 +32,10 @@ function findLargest(rootNode) {
 
 function findSecondLargest(rootNode) {
   // check if at least 2 nodes
+  if(!rootNode || (!rootNode.left && !rootNode.right)) {
+    throw new Error('Must have at least two nodes');
+  }
+
   let current = rootNode;
   while (current) {
     if (!current.right && current.left) {
