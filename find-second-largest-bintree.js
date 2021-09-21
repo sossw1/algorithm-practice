@@ -48,5 +48,7 @@ function findSecondLargest(rootNode) {
       return current.value;
     }
 
+    // case: current is parent of right subtree, move right
+    current = current.right;
   }
 }
