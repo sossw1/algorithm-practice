@@ -10,6 +10,6 @@ class GraphNode {
   }
 }
 
-function findColoring(graphNode) {
+function findColoring(graph, colors) {
 
 }
