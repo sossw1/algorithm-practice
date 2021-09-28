@@ -19,6 +19,12 @@ function findColoring(graph, colors) {
       throw new Error(`Legal coloring impossible for node with loop: ${node.label}`);
     }
 
+    const usedColors = new Set();
+    node.neighbors.forEach(neighbor => {
+      if(!usedColors.has(neighbor.color)) {
+        usedColors.add(neighbor.color);
+      }
+    });
     
   });
 }
