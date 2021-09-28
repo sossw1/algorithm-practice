@@ -25,6 +25,12 @@ function findColoring(graph, colors) {
         usedColors.add(neighbor.color);
       }
     });
-    
+
+    for(let i=0; i < colors.length; i++) {
+      if(!usedColors.has(colors[i])) {
+        node.color = colors[i];
+        break;
+      }
+    }
   });
 }
