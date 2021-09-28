@@ -2,6 +2,9 @@
 Write a function to find a graph coloring for an undirected graph with N nodes and M edges with maximum node degree D using at most D+1 colors.
 
   Idea 1: For each node, assign a color that is not already assigned to one of its neighbors. This is an iteration rather than a search (BFS/DFS).
+  
+    Time: O(M + N)
+    Space: O(D)
 */
 
 class GraphNode {
