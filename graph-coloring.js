@@ -13,5 +13,12 @@ class GraphNode {
 }
 
 function findColoring(graph, colors) {
+  graph.forEach(node => {
+    // check if node has a loop edge
+    if(node.neighbors.has(node)) {
+      throw new Error(`Legal coloring impossible for node with loop: ${node.label}`);
+    }
 
+    
+  });
 }
