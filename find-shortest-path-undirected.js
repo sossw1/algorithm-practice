@@ -10,6 +10,18 @@ Given an undirected graph of friends in a network find a shortest route for a me
     2) If the sender or the recipient are not in the graph, throw an error
 */
 
+class Queue {
+  constructor(array = []) {
+    this.elements = array;
+  }
+  enqueue(value) {
+    this.elements.push(value);
+  }
+  dequeue() {
+    return this.elements.shift();
+  }
+}
+
 function reconstructPath(previousNodes, end) {
   const reversedShortestPath = [];
   let currentNode = end;
