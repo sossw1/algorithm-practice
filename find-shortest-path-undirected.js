@@ -10,6 +10,16 @@ Given an undirected graph of friends in a network find a shortest route for a me
     2) If the sender or the recipient are not in the graph, throw an error
 */
 
+function reconstructPath(previousNodes, end) {
+  const reversedShortestPath = [];
+  let currentNode = end;
+  while(currentNode !== null) {
+    reversedShortestPath.push(currentNode);
+    currentNode = previousNodes[currentNode];
+  }
+  return reversedShortestPath.reverse();
+}
+
 function findShortestPath(graph, start, end) {
 
 }
