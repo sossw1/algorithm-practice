@@ -20,6 +20,9 @@ class Queue {
   dequeue() {
     return this.elements.shift();
   }
+  length() {
+    return this.elements.length;
+  }
 }
 
 function reconstructPath(previousNodes, end) {
