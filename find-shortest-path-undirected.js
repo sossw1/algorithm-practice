@@ -42,5 +42,7 @@ function findShortestPath(graph, start, end) {
   if(!graph.hasOwnProperty(end)) {
     throw new Error('End node not in graph');
   }
+  const nodesToVisit = new Queue();
+  nodesToVisit.enqueue(start);
   
 }
