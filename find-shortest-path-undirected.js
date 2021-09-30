@@ -7,6 +7,7 @@ Given an undirected graph of friends in a network find a shortest route for a me
 
   Exceptions:
     1) If there is no path from the sender to the recipient, return null
+    2) If the sender or the recipient are not in the graph, throw an error
 */
 
 function findShortestPath(graph, start, end) {
