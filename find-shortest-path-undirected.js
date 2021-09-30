@@ -21,5 +21,11 @@ function reconstructPath(previousNodes, end) {
 }
 
 function findShortestPath(graph, start, end) {
-
+  if(!graph.hasOwnProperty(start)) {
+    throw new Error('Start node not in graph');
+  }
+  if(!graph.hasOwnProperty(end)) {
+    throw new Error('End node not in graph');
+  }
+  
 }
