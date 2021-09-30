@@ -44,5 +44,15 @@ function findShortestPath(graph, start, end) {
   }
   const nodesToVisit = new Queue();
   nodesToVisit.enqueue(start);
+
+  const previousNodes = {};
+  previousNodes[startNode] = null;
   
+  while(nodesToVisit.size > 0) {
+    const currentNode = nodesToVisit.dequeue();
+    if(currentNode === end) {
+      return reconstructPath(previousNodes, end);
+    }
+    
+  }
 }
