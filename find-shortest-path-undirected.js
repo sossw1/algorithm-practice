@@ -61,4 +61,5 @@ function findShortestPath(graph, start, end) {
       }
     });
   }
+  return null;
 }
