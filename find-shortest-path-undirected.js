@@ -53,6 +53,12 @@ function findShortestPath(graph, start, end) {
     if(currentNode === end) {
       return reconstructPath(previousNodes, end);
     }
-    
+    graph[currentNode].forEach(neighbor => {
+      // if neighbor not visited, enqueue and add to previousNodes
+      if(!previousNodes.hasOwnProperty(neighbor)) {
+        nodesToVisit.enqueue(neighbor);
+        previousNodes[neighbor] = currentNode;
+      }
+    });
   }
 }
