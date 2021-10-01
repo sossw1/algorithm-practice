@@ -6,6 +6,8 @@ finds an integer that appears more than once in the array without modifying the
 input array. Optimize the solution for space efficiency.
 
 To start, imagine each item in the array as a node in a linked list, where each node has a value and an associated 'next' pointer.
+
+  Idea 1: Search for a node that has 2 inbound edges. That node's index is the value of a duplicate.
 */
 
 function findDuplicate(intArray) {
