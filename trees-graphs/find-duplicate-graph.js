@@ -35,4 +35,14 @@ function findDuplicate(intArray) {
     cycleLength++;
   } while (currentIndex !== firstKnownInCycle);
 
+  let firstPointer = headIndex;
+  let secondPointer = headIndex;
+  for(let j = 0; j < cycleLength; j++) {
+    secondPointer = intArray[secondPointer] - 1;
+  }
+  while(firstPointer !== secondPointer) {
+    firstPointer = intArray[firstPointer] - 1;
+    secondPointer = intArray[secondPointer] - 1;
+  }
+  return firstPointer + 1;
 }
