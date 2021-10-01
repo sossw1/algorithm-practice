@@ -20,5 +20,11 @@ To start, imagine each item in the array as a node in a linked list, where each 
 */
 
 function findDuplicate(intArray) {
+  const headIndex = intArray.length - 1;
+
+  let currentIndex = headIndex;
+  for(let i = 0; i < intArray.length - 1; i++) {
+    currentIndex = intArray[currentIndex] - 1;
+  }
 
 }
