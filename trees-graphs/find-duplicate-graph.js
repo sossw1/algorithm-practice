@@ -17,6 +17,10 @@ To start, imagine each item in the array as a node in a linked list, where each 
     In order to find a node with two inbound pointers (like in idea 1), the first node we encounter that is part of a cycle must have two pointers. We know this is true because we start from outside of the cycle and then enter the cycle.
 
     To find this special node, first find the length of the cycle (l). We can do this by starting at the head and advancing n times, thus necessitating that we are inside a cycle. Using this position, advance until you get back to the same spot and find out how many steps it took, which is the cycle length. Then use two pointers, one at the head and one that is l spaces ahead, and advance them until they are at the same node.
+
+    Efficiency
+    Time: O(n)
+    Space: O(1)
 */
 
 function findDuplicate(intArray) {
