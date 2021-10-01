@@ -27,4 +27,12 @@ function findDuplicate(intArray) {
     currentIndex = intArray[currentIndex] - 1;
   }
 
+  // Find cycle length
+  const firstKnownInCycle = currentIndex;
+  let cycleLength = 0;
+  do {
+    currentIndex = intArray[currentIndex] - 1;
+    cycleLength++;
+  } while (currentIndex !== firstKnownInCycle);
+
 }
