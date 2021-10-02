@@ -9,8 +9,11 @@ Write a recursive function for generating all permutations of an input string, r
   1234, 1243, 1423, 4123, 4132, 4312, 3412, 3421, 3241, 2341, 2314, 2134, (1234 is a repeat)
 
   Swap sequentially from right to left until repeat (original string encountered. For a string of length n, swap n and n-1 position, n-1 and n-2 position, ..., 1 and 2 position. Repeat n times. Results in n(n-1) which is O(n^2) operations. This is not able to be made recursive.
+
+  Idea 2: Split into smaller subproblems.
+  For example to find permutations of 'dogs', find permutations of dog and then place 's' in each other spot ('sdog','dsog','dosg','dogs').
 */
 
-function getPermutationSet(str) {
+function getPermutations(string) {
 
 }
