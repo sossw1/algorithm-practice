@@ -1,5 +1,14 @@
 /*
 Write a recursive function for generating all permutations of an input string, returning them as a set.
+
+  Idea 1:
+  Can achieve all permutations by running swaps sequentially.
+  1
+  12, 21, (12 is a repeat)
+  123, 132, 312, 321, 231, 213, (123 is a repeat)
+  1234, 1243, 1423, 4123, 4132, 4312, 3412, 3421, 3241, 2341, 2314, 2134, (1234 is a repeat)
+
+  Swap sequentially from right to left until repeat (original string encountered. For a string of length n, swap n and n-1 position, n-1 and n-2 position, ..., 1 and 2 position. Repeat n times. Results in n(n-1) which is O(n^2) operations. This is not able to be made recursive.
 */
 
 function getPermutationSet(str) {
