@@ -15,5 +15,8 @@ Write a recursive function for generating all permutations of an input string, r
 */
 
 function getPermutations(string) {
+  if(string.length < 2) {
+    return new Set(string);
+  }
 
 }
