@@ -24,4 +24,11 @@ function getPermutations(string) {
   const remainingString = string.slice(1);
   const remainingStringPermutations = getPermutations(remainingString);
 
+  remainingStringPermutations.forEach(string => {
+    for(let i = 0; i <= string.length; i++) {
+      const result = string.slice(0,i) + firstChar + string.slice(i);
+      resultSet.add(result);
+    }
+  });
+  return resultSet;
 }
