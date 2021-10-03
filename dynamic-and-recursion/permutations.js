@@ -19,4 +19,9 @@ function getPermutations(string) {
     return new Set(string);
   }
 
+  const resultSet = new Set();
+  const firstChar = string.charAt(0);
+  const remainingString = string.slice(1);
+  const remainingStringPermutations = getPermutations(remainingString);
+
 }
