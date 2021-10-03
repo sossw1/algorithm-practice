@@ -12,6 +12,10 @@ Write a recursive function for generating all permutations of an input string, r
 
   Idea 2: Split into smaller subproblems.
   For example to find permutations of 'dogs', find permutations of dog and then place 's' in each other spot ('sdog','dsog','dosg','dogs').
+
+  Efficiency
+    Time: O(n!)
+    Space: O(n!)
 */
 
 function getPermutations(string) {
