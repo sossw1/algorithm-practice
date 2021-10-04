@@ -7,5 +7,8 @@ Given a total and an array of integers representing coin denominations, write a 
 */
 
 function numCurrencyCombinations(denominations, total) {
+  // base case
+  const combinations = new Array(total + 1).fill(0);
+  combinations[0] = 1;
 
 }
