@@ -5,5 +5,7 @@ Suppose you have infinite supply of a given set of coins, each with their own we
 */
 
 function maxCarriedValue(coinTypes, maxWeight) {
-  
+  // base case
+  const bestValue = new Array(maxWeight + 1).fill(0);
+
 }
