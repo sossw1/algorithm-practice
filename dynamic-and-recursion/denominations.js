@@ -4,6 +4,11 @@ Given a total and an array of integers representing coin denominations, write a 
   Idea 1: Recursively compose set of solutions iterating from 1 to total.
 
   Idea 2: Build an array for number of solutions from bottom up.
+
+  Efficiency
+    Where n is the total and d is the number of denominations
+    Time: O(n*d)
+    Space: O(n)
 */
 
 function numCurrencyCombinations(denominations, total) {
