@@ -13,7 +13,8 @@ function numCurrencyCombinations(denominations, total) {
 
   denominations.forEach(coin => {
     for(let currentTotal = coin; currentTotal <= total; currentTotal++) {
-      
+      const remainder = currentTotal - coin;
+      combinations[currentTotal] += combinations[remainder];
     }
   });
 
