@@ -11,4 +11,11 @@ function numCurrencyCombinations(denominations, total) {
   const combinations = new Array(total + 1).fill(0);
   combinations[0] = 1;
 
+  denominations.forEach(coin => {
+    for(let currentTotal = coin; currentTotal <= total; currentTotal++) {
+      
+    }
+  });
+
+  return combinations[total];
 }
