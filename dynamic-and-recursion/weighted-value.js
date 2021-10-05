@@ -7,11 +7,13 @@ Suppose you have infinite supply of a given set of coins, each with their own we
 function maxCarriedValue(coinTypes, maxWeight) {
   // base case
   const bestValue = new Array(maxWeight + 1).fill(0);
-  coinTypes.forEach(coin => {
+  for(let coinIndex = 0; coinIndex < coinTypes.length; coinIndex++) {
+    const coin = coinTypes[coinIndex];
+    if(coin.weight === 0 && coin.value > 0) return Infinity;
     for(let i = coin.weight; i <= maxWeight; i++) {
       let remainingWeight = i - coin.weight;
       bestValue[i] = Math.max(bestValue[i], coin.value + bestValue[remainingWeight]);
     }
-  });
+  }
   return bestValue[maxWeight];
 }
