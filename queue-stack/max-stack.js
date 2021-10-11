@@ -2,6 +2,10 @@
 Given the below Stack class, implement a new class MaxStack with a method getMax that returns the largest element in the stack without removing the item. Stacks will only contain integers.
 
   Idea 1: Use a greedy algorithm by popping elements from the stack into another stack, which will be in reverse order, then pop from that stack back into the original stack so that order is maintained.
+
+  Idea 2: Idea 1's implementation would result in recalculation every time it is called, even when the maximum does not change, since it is run just-in-time. To improve upon the runtime of O(n), we could determine if the maximum changes when any item is added or removed from the stack. Store the maximum in a new property. To maintain this property's accuracy, when we:
+    1) Add an item - we should check if the added item is greater than the previous maximum. If so, the new item's value becomes the new maximum.
+    2) Remove an item - we should check if we removed the maximum item. If we did, we should recalculate the new maximum which would be the next lowest value.
 */
 
 class Stack {
