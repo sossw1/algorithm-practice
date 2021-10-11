@@ -47,6 +47,6 @@ class MaxStack {
     return item;
   }
   getMax() {
-    
+    return this.maxesStack.peek();
   }
 }
