@@ -1,5 +1,5 @@
 /*
-Given the below Stack class, implement a new class MaxStack with a method getMax that returns the largest element in the stack without removing the item.
+Given the below Stack class, implement a new class MaxStack with a method getMax that returns the largest element in the stack without removing the item. Stacks will only contain integers.
 */
 
 class Stack {
