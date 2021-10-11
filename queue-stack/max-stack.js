@@ -32,8 +32,11 @@ class MaxStack {
     this.stack = new Stack();
     this.maxesStack = new Stack();
   }
-  push() {
-
+  push(item) {
+    this.stack.push(item);
+    if(item >= this.maxesStack.peek() || this.maxesStack.peek() === null) {
+      this.maxesStack.push(item);
+    }
   }
   pop() {
 
