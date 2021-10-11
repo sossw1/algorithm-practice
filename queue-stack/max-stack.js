@@ -18,3 +18,8 @@ class Stack {
     return this.items[this.items.length - 1];
   }
 }
+
+class MaxStack extends Stack {
+  // using Stack constructor by default
+  
+}
