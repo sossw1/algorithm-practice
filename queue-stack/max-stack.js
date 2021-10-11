@@ -27,11 +27,16 @@ class Stack {
   }
 }
 
-class MaxStack extends Stack {
+class MaxStack {
   constructor() {
-    super();
-    this.previousMax = [];
-    this.max = null;
+    this.stack = new Stack();
+    this.maxesStack = new Stack();
+  }
+  push() {
+
+  }
+  pop() {
+
   }
   getMax() {
     
