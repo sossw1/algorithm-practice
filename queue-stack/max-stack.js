@@ -44,7 +44,6 @@ class MaxStack {
   }
   pop() {
     const item = this.stack.pop();
-    // if stack item was max, remove it from top of maxesStack
     if(item === this.maxesStack.peek()) {
       this.maxesStack.pop();
     }
