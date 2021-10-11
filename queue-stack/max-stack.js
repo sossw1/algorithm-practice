@@ -8,6 +8,10 @@ Given the below Stack class, implement a new class MaxStack with a method getMax
     (2) Remove an item - we should check if we removed the maximum item. If we did, we should recalculate the new maximum which would be the next lowest value.
   
   Idea 3: To improve upon worst-case scenario O(n) of item removal from Idea 2, when a new maximum value is pushed to the stack we should store the previous item in a stack. Then, if we remove the new maximum value, we can simply pop from the stack of previous maximums.
+
+    Efficiency
+    Time: O(1)
+    Space: O(m) where m is the number of operations performed on the stack
 */
 
 class Stack {
