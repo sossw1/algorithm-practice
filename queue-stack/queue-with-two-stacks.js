@@ -1,5 +1,7 @@
 /*
 Implement a queue with two stacks. Your queue should have enqueue and dequeue methods and be FIFO. Assume you already have a stack implementation with push and pop methods operating in O(1) time.
+
+  Idea 1: Enqueues push items to one stack while dequeues pop items from the other stack. When switching from an enqueue call to a dequeue call or vice versa, make sure items are transferred to the correct stack.
 */
 
 class Stack {
@@ -19,5 +21,5 @@ class Stack {
 }
 
 class Queue {
-  
+
 }
