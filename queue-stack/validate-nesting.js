@@ -19,6 +19,7 @@ class Stack {
 
 function isNestingValid(string) {
   const openingSymbols = new Stack();
+  let matchingOpeningSymbol = null;
   for (let i = 0; i < string.length; i++) {
     let character = string[i];
     switch (character) {
@@ -27,8 +28,33 @@ function isNestingValid(string) {
       case '[':
         openingSymbols.push(character);
         break;
+      case ')':
+        matchingOpeningSymbol = '(';
+        opening = openingSymbols.pop();
+        if (opening === matchingOpeningSymbol) {
+          break;
+        } else {
+          return false;
+        }
+      case '}':
+        matchingOpeningSymbol = '{';
+        opening = openingSymbols.pop();
+        if (opening === matchingOpeningSymbol) {
+          break;
+        } else {
+          return false;
+        }
+      case ']':
+        matchingOpeningSymbol = '[';
+        opening = openingSymbols.pop();
+        if (opening === matchingOpeningSymbol) {
+          break;
+        } else {
+          return false;
+        }
       default:
         break;
     }
   }
+  return true;
 }
