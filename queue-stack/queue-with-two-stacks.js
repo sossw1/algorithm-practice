@@ -6,6 +6,10 @@ Implement a queue with two stacks. Your queue should have enqueue and dequeue me
   Idea 2: Improve upon idea 1. When calling second/third/etc. dequeue/enqueue, simply push/pop from the same stack as the previous operation.
 
   Idea 3: Enqueue to an IN stack, dequeue from an OUT stack. If the OUT stack is empty, move all items from the IN stack to the out stack one by one, then dequeue from OUT stack.
+
+    Efficiency per m operations
+    Time: Each item has O(1) time to enqueue and O(1) time to dequeue, so the total for m operations is O(m)
+    Space: Worst case is all items are enqueued before any are dequeued, so O(m) space
 */
 
 class Stack {
@@ -16,7 +20,7 @@ class Stack {
     this.items.push(item);
   }
   pop() {
-    if(!this.items.length) {
+    if (!this.items.length) {
       return null;
     } else {
       return this.items.pop();
@@ -30,16 +34,16 @@ class Queue {
     this.outStack = new Stack();
   }
   enqueue(item) {
-    this.inStack.push(item);    
+    this.inStack.push(item);
   }
   dequeue() {
-    if(!this.outStack.items.length) {
-      while(this.inStack.items.length) {
+    if (!this.outStack.items.length) {
+      while (this.inStack.items.length) {
         let current = this.inStack.pop();
         this.outStack.push(current);
       }
     }
-    if(!this.outStack.items.length) {
+    if (!this.outStack.items.length) {
       throw new Error('Cannot dequeue from an empty queue');
     }
     return this.outStack.pop();
