@@ -30,7 +30,7 @@ class Queue {
     this.outStack = new Stack();
   }
   enqueue(item) {
-  
+    this.inStack.push(item);    
   }
   dequeue() {
 
