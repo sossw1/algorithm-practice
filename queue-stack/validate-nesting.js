@@ -56,5 +56,5 @@ function isNestingValid(string) {
         break;
     }
   }
-  return true;
+  return openingSymbols.items.length ? false : true;
 }
