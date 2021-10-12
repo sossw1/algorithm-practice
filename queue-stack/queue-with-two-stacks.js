@@ -33,6 +33,11 @@ class Queue {
     this.inStack.push(item);    
   }
   dequeue() {
-
+    if(!this.outStack.items.length) {
+      while(this.inStack.items.length) {
+        let current = this.inStack.pop();
+        this.outStack.push(current);
+      }
+    }
   }
 }
