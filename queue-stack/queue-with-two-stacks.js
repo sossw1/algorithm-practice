@@ -39,5 +39,9 @@ class Queue {
         this.outStack.push(current);
       }
     }
+    if(!this.outStack.items.length) {
+      throw new Error('Cannot dequeue from an empty queue');
+    }
+    return this.outStack.pop();
   }
 }
