@@ -18,5 +18,17 @@ class Stack {
 }
 
 function isNestingValid(string) {
-
+  const openingSymbols = new Stack();
+  for (let i = 0; i < string.length; i++) {
+    let character = string[i];
+    switch (character) {
+      case '(':
+      case '{':
+      case '[':
+        openingSymbols.push(character);
+        break;
+      default:
+        break;
+    }
+  }
 }
