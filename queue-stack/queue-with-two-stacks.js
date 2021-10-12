@@ -25,5 +25,14 @@ class Stack {
 }
 
 class Queue {
+  constructor() {
+    this.inStack = new Stack();
+    this.outStack = new Stack();
+  }
+  enqueue(item) {
+  
+  }
+  dequeue() {
 
+  }
 }
