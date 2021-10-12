@@ -5,5 +5,17 @@ Write a function that, given a sentence that may contain nested parentheses and 
 */
 
 function findCloseParenthesis(string, openingPosition) {
-
+  let numOpenParentheses = 1;
+  for (let position = openingPosition + 1; position <= string.length; position++) {
+    let char = string[position];
+    if (char === '(') {
+      numOpenParentheses += 1;
+    } else if (char === ')') {
+      numOpenParentheses -= 1;
+      if (numOpenParentheses === 0) {
+        return position;
+      }
+    }
+  }
+  throw new Error('No closing parenthesis');
 }
