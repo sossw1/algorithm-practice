@@ -14,5 +14,10 @@ class LinkedListNode {
 }
 
 function containsCycle(head) {
-
+  let slowPointer = head;
+  let fastPointer = head;
+  while (fastPointer && fastPointer.next) {
+    
+  }
+  return false;
 }
