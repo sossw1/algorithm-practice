@@ -6,6 +6,8 @@ Write a function that deletes a node from a singly-linked list, given only a var
     Efficiency
     Time: O(n)
     Space: O(1)
+
+    Note: A faster method can accomplish this in O(1) time by reassigning value of the input node to the next node and next for the input node to the next's next instead of deleting it. However, this may cause side effects elsewhere in our code since it would effectively delete the next node instead and alter the input node. See the function deleteNodeRisky() below.
 */
 
 class LinkedListNode {
@@ -22,4 +24,13 @@ function deleteNode(node) {
     current = current.next;
   }
   current.next = pointer;
+}
+
+function deleteNodeRisky(node) {
+  if (node.next) {
+    node.value = node.next.value;
+    node.next = node.next.next;
+  } else {
+    throw new Error('Cannot delete the last node with this technique')
+  }
 }
