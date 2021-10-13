@@ -12,5 +12,10 @@ class LinkedListNode {
 }
 
 function deleteNode(node) {
-
+  const pointer = node.next;
+  let current = node;
+  while (current.next.value !== node.value) {
+    current = current.next;
+  }
+  current.next = pointer;
 }
