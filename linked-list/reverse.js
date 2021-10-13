@@ -12,5 +12,16 @@ class LinkedListNode {
 }
 
 function reverseList(head) {
+  let previousNode = null;
+  let currentNode = head;
+  let nextNode = null;
 
+  while(currentNode) {
+    nextNode = currentNode.next;
+    currentNode.next = previousNode;
+    previousNode = currentNode;
+    currentNode = nextNode;
+  }
+
+  return previousNode;
 }
