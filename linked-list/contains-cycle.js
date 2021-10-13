@@ -6,6 +6,13 @@ Write a function that takes the first node in a singly-linked list and returns a
   Idea 2: Use two pointers, where one "slow" pointer traverses one node at a time, while a "fast" pointer traverses two nodes at a time. If they collide, we have a loop. If the "slow" pointer reaches the end (a null "next"), we terminate knowing there were no loops.
 */
 
+class LinkedListNode {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
 function containsCycle(head) {
 
 }
