@@ -12,5 +12,14 @@ class LinkedListNode {
 }
 
 function kthToLastNode(head, k) {
+  let leftNode = head;
+  let rightNode = head;
+  for (let i = 0; i < k - 1; i++) {
+    if(rightNode.next) {
+      rightNode = rightNode.next;
+    } else {
+      throw new Error('k is greater than the number of nodes');
+    }
+  }
 
 }
