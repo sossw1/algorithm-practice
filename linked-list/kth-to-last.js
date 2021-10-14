@@ -21,5 +21,9 @@ function kthToLastNode(head, k) {
       throw new Error('k is greater than the number of nodes');
     }
   }
-
+  while (rightNode.next) {
+    leftNode = leftNode.next;
+    rightNode = rightNode.next;
+  }
+  return leftNode;
 }
