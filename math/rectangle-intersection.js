@@ -5,10 +5,10 @@ Given two rectangles as the coordinates of the bottom left corner and their widt
 
 class Rectangle {
   constructor(leftX, bottomY, width, height) {
-    leftX,
-    bottomY,
-    width,
-    height
+    this.leftX = leftX
+    this.bottomY = bottomY
+    this.width = width
+    this.height = height
   }
 }
 
