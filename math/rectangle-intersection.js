@@ -14,6 +14,22 @@ class Rectangle {
   }
 }
 
+function findRangeOverlap(point1, length1, point2, length2) {
+  const lowerBound = Math.max(point1, point2);
+  const upperBound = Math.min(point1 + length1, point2 + length2);
+  if(lowerBound < upperBound) {
+    return {
+      startPoint: lowerBound,
+      overlapLength: upperBound - lowerBound
+    };
+  } else {
+    return {
+      startPoint: null,
+      overlapLength: null
+    };
+  }
+}
+
 function intersection(rectangleA, rectangleB) {
 
 }
