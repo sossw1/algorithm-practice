@@ -6,7 +6,7 @@ Given two rectangles as the coordinates of the bottom left corner and their widt
 
 
 class Rectangle {
-  constructor(leftX, bottomY, width, height) {
+  constructor(leftX = null, bottomY = null, width = null, height = null) {
     this.leftX = leftX
     this.bottomY = bottomY
     this.width = width
@@ -33,5 +33,5 @@ function findRangeOverlap(point1, length1, point2, length2) {
 function intersection(rectA, rectB) {
   const overlapX = findRangeOverlap(rectA.leftX, rectA.width, rectB.leftX, rectB.width);
   const overlapY = findRangeOverlap(rectA.bottomY, rectA.height, rectB.bottomY, rectB.height);
-
+  
 }
