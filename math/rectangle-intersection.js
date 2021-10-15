@@ -33,5 +33,10 @@ function findRangeOverlap(point1, length1, point2, length2) {
 function intersection(rectA, rectB) {
   const overlapX = findRangeOverlap(rectA.leftX, rectA.width, rectB.leftX, rectB.width);
   const overlapY = findRangeOverlap(rectA.bottomY, rectA.height, rectB.bottomY, rectB.height);
-  
+
+  if (!overlapX.overlapLength || !overlapY.overlapLength) {
+    return new Rectangle();
+  } else {
+    return new Rectangle(overlapX.startPoint, overlapY.startPoint, overlapX.overlapLength, overlapY.overlapLength);
+  }
 }
