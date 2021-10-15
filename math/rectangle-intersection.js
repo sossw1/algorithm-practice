@@ -30,6 +30,8 @@ function findRangeOverlap(point1, length1, point2, length2) {
   }
 }
 
-function intersection(rectangleA, rectangleB) {
+function intersection(rectA, rectB) {
+  const overlapX = findRangeOverlap(rectA.leftX, rectA.width, rectB.leftX, rectB.width);
+  const overlapY = findRangeOverlap(rectA.bottomY, rectA.height, rectB.bottomY, rectB.height);
 
 }
