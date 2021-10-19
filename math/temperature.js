@@ -43,6 +43,11 @@ class TempTracker {
     } else {
       this.max = temp;
     }
+
+    // update mean
+    let previousTotal = this.entries * this.mean;
+    this.entries += 1;
+    this.mean = (previousTotal + temp) / this.entries;
     
   }
   getMax() {
