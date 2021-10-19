@@ -29,6 +29,13 @@ class TempTracker {
       frequency = 1;
     }
     this.temps.set(temp, frequency);
+
+    // update min
+    if (this.min) {
+      this.min = Math.min(temp, this.min);
+    } else {
+      this.min = temp;
+    }
     
   }
   getMax() {
