@@ -5,5 +5,8 @@ Given an array of n+1 integers between 1 and n where each number appears once ex
 */
 
 function findDuplicate(arrayOfInts) {
-
+  const highestInt = arrayOfInts.length - 1;
+  const sum = arrayOfInts.reduce((acc, curr) => acc + curr , 0);
+  const sumOfUnique = (highestInt * (highestInt + 1)) / 2;
+  return sum - sumOfUnique;
 }
