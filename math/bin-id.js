@@ -7,5 +7,9 @@ Given an array of IDs which contains many duplicate integers and one unique inte
 */
 
 function findUnique(arrayOfIds) {
-
+  let unique = 0;
+  arrayOfIds.forEach(id => {
+    unique = unique ^ id;
+  });
+  return unique;
 }
