@@ -36,6 +36,13 @@ class TempTracker {
     } else {
       this.min = temp;
     }
+
+    // update max
+    if (this.max) {
+      this.max = Math.max(temp, this.max);
+    } else {
+      this.max = temp;
+    }
     
   }
   getMax() {
