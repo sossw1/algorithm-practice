@@ -22,6 +22,13 @@ class TempTracker {
     this.modeFrequency = null;
   }
   insert() {
+    let frequency = this.temps.get(temp);
+    if (frequency) {
+      frequency += 1;
+    } else {
+      frequency = 1;
+    }
+    this.temps.set(temp, frequency);
     
   }
   getMax() {
