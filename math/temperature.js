@@ -21,7 +21,7 @@ class TempTracker {
     this.mode = null;
     this.modeFrequency = null;
   }
-  insert() {
+  insert(temp) {
     let frequency = this.temps.get(temp);
     if (frequency) {
       frequency += 1;
