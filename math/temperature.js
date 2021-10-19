@@ -12,5 +12,28 @@ Be sure to optimize for time and space, favoring speeding up the get methods ove
 */
 
 class TempTracker {
-
+  constructor() {
+    this.temps = new Map();
+    this.entries = 0;
+    this.min = null;
+    this.max = null;
+    this.mean = null;
+    this.mode = null;
+    this.modeFrequency = null;
+  }
+  insert() {
+    
+  }
+  getMax() {
+    return this.max;
+  }
+  getMin() {
+    return this.min;
+  }
+  getMean() {
+    return this.mean;
+  }
+  getMode() {
+    return this.mode;
+  }
 }
