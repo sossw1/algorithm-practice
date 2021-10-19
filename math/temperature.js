@@ -15,7 +15,7 @@ Be sure to optimize for time and space, favoring speeding up the get methods ove
 
 class TempTracker {
   constructor() {
-    this.temps = new Map();
+    this.temps = new Array(111).fill(0);
     this.entries = 0;
     this.min = null;
     this.max = null;
@@ -24,13 +24,8 @@ class TempTracker {
     this.modeFrequency = null;
   }
   insert(temp) {
-    let frequency = this.temps.get(temp);
-    if (frequency) {
-      frequency += 1;
-    } else {
-      frequency = 1;
-    }
-    this.temps.set(temp, frequency);
+    this.temps[temp] += 1;
+    const frequency = this.temps[temp];
 
     // update min
     if (this.min) {
@@ -52,10 +47,8 @@ class TempTracker {
     this.mean = (previousTotal + temp) / this.entries;
     
     // update mode
-    if (frequency === this.modeFrequency) {
-      this.mode.push(temp);
-    } else if (frequency > this.modeFrequency) {
-      this.mode = [temp];
+    if (frequency > this.modeFrequency) {
+      this.mode = temp;
       this.modeFrequency = frequency;
     }
   }
