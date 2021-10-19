@@ -49,6 +49,13 @@ class TempTracker {
     this.entries += 1;
     this.mean = (previousTotal + temp) / this.entries;
     
+    // update mode
+    if (frequency === this.modeFrequency) {
+      this.mode.push(temp);
+    } else if (frequency > this.modeFrequency) {
+      this.mode = [temp];
+      this.modeFrequency = frequency;
+    }
   }
   getMax() {
     return this.max;
