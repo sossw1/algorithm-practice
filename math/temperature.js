@@ -7,8 +7,10 @@ Write a class for a temperature tracker with the following methods:
 5) getMode() returns the mode of all recorded temperatures. If there is more than one mode, return all of them.
 
 Be sure to optimize for time and space, favoring speeding up the get methods over the insert method. Temperatures will be reported in Fahrenheit as numbers between 0 and 110.
+
+  Idea 1: Insert temperatures into a map with their occurrences. Upon insertion, update previous values for max, min, mean, modes, number of entries and the number of occurrences of the modes. Retrieval of each get method would then simply retrieve their stored values in the object.
 */
 
-class tempTracker {
+class TempTracker {
 
 }
