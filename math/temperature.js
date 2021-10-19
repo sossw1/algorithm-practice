@@ -11,6 +11,10 @@ Be sure to optimize for time and space, favoring speeding up the get methods ove
   Idea 1: Insert temperatures into a map with their occurrences. Upon insertion, update previous values for max, min, mean, modes, number of entries and the number of occurrences of the modes. Retrieval of each get method would then simply retrieve their stored values in the object.
 
   Idea 2: Simplify tracking temperature occurrences by using an array. Can return any mode, so only update when new entry frequency exceeds mode frequency.
+
+    Efficiency for all methods
+    Time: O(1)
+    Space: O(1) (Note: temps array has a limited size)
 */
 
 class TempTracker {
